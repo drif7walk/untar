@@ -1,0 +1,13 @@
+#!/bin/bash
+
+ext=$(echo $1 | rev | cut -c1-2 | rev)
+
+if [ "$ext" == "xz" ]
+then
+ tar -xvf $1
+elif [ "$ext" == "gz" ]
+then
+ tar -zxvf $1
+fi
+
+#tar -xvf 
